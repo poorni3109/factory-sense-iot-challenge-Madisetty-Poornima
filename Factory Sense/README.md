@@ -34,7 +34,7 @@ Running the Simulator against the Live URL
 You can test the production environment directly using the included simulator script:
 
 Bash
-python simulator.py https://factorysense-challenge-3.onrender.com
+python simulator.py https://factorysenseproject.onrender.com/docs
 
 ## API Endpoints
 
