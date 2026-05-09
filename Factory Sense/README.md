@@ -22,20 +22,19 @@ uvicorn main:app --reload --host 0.0.0.0
 python simulator.py
 ```
 
-## Deploy to Railway
+**Deployment (Render)**
+The application is deployed as a live web service on Render.
+GitHub Integration: The repository is linked to Render for Continuous Deployment (CD).
+Environment Configuration: The following secrets are managed via the Render Dashboard:
+TWILIO_ACCOUNT_SID
+TWILIO_AUTH_TOKEN
+TWILIO_WHATSAPP_FROM (Twilio Sandbox Number)
+ALERT_WHATSAPP_TO (Your verified destination number)
+Running the Simulator against the Live URL
+You can test the production environment directly using the included simulator script:
 
-1. Push this repo to GitHub
-2. Go to [railway.app](https://railway.app) → New Project → Deploy from GitHub
-3. Railway auto-detects the `Procfile` and `requirements.txt`
-4. Add environment variables in Railway dashboard:
-   - `TWILIO_ACCOUNT_SID`
-   - `TWILIO_AUTH_TOKEN`
-   - `TWILIO_WHATSAPP_FROM` (default: `whatsapp:+14155238886`)
-   - `ALERT_WHATSAPP_TO` (e.g., `whatsapp:+91XXXXXXXXXX`)
-5. Railway assigns a live URL — use it with the simulator:
-   ```bash
-   python simulator.py https://your-app.up.railway.app
-   ```
+Bash
+python simulator.py https://factorysense-challenge-3.onrender.com
 
 ## API Endpoints
 
